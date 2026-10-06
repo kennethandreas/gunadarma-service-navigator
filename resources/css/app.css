@@ -1,0 +1,156 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+/*
+|--------------------------------------------------------------------------
+| Design tokens — Gunadarma Academic Service Navigator
+|--------------------------------------------------------------------------
+|
+| Purple is the identity accent (Gunadarma), used sparingly for CTAs, active
+| nav, links, focus states and highlights — not as a page-filling color.
+| Defining these under Tailwind v4's @theme also generates matching
+| utilities automatically: bg-primary, text-primary, border-primary, etc.
+|
+*/
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+
+    /* Brand */
+    --color-primary: #6d28d9;
+    --color-primary-hover: #5b21b6;
+    --color-primary-light: #f3eefc;
+
+    /* Neutrals */
+    --color-background: #fafafa;
+    --color-surface: #ffffff;
+    --color-text: #18181b;
+    --color-text-muted: #71717a;
+    --color-border: #e4e4e7;
+
+    /* Status */
+    --color-success: #16a34a;
+    --color-success-light: #f0fdf4;
+    --color-warning: #d97706;
+    --color-warning-light: #fffbeb;
+    --color-error: #dc2626;
+    --color-error-light: #fef2f2;
+}
+
+@layer base {
+    body {
+        background-color: var(--color-background);
+        color: var(--color-text);
+    }
+
+    h1, h2, h3, h4 {
+        font-weight: 600;
+        letter-spacing: -0.01em;
+    }
+}
+
+/*
+|--------------------------------------------------------------------------
+| Reusable components
+|--------------------------------------------------------------------------
+|
+| Shared classes so every page (public + admin) looks consistent. Prefer
+| these over one-off utility soup when building new views.
+|
+| Note: Tailwind v4's @apply can only apply real utilities, not other
+| custom classes — so each variant below repeats its shared base utilities
+| directly instead of chaining (e.g. `.btn-primary { @apply btn ... }`
+| does not work in v4).
+|
+*/
+@layer components {
+    /* Typography scale */
+    .heading-1 {
+        @apply text-3xl sm:text-4xl font-semibold tracking-tight text-text;
+    }
+    .heading-2 {
+        @apply text-2xl sm:text-3xl font-semibold tracking-tight text-text;
+    }
+    .heading-3 {
+        @apply text-lg sm:text-xl font-semibold text-text;
+    }
+    .text-body {
+        @apply text-base text-text;
+    }
+    .text-body-muted {
+        @apply text-base text-text-muted;
+    }
+
+    /* Buttons */
+    .btn-primary {
+        @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-medium
+               transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-offset-2
+               disabled:cursor-not-allowed disabled:opacity-50
+               bg-primary text-white shadow-sm hover:bg-primary-hover focus:ring-primary;
+    }
+    .btn-secondary {
+        @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-medium
+               transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-offset-2
+               disabled:cursor-not-allowed disabled:opacity-50
+               bg-surface text-text border border-border hover:bg-background focus:ring-primary;
+    }
+    .btn-ghost {
+        @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-medium
+               transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-offset-2
+               disabled:cursor-not-allowed disabled:opacity-50
+               text-text-muted hover:text-text hover:bg-background focus:ring-primary;
+    }
+
+    /* Cards */
+    .card {
+        @apply rounded-2xl border border-border bg-surface shadow-sm;
+    }
+    .card-hover {
+        @apply rounded-2xl border border-border bg-surface shadow-sm
+               transition-all duration-150 hover:-translate-y-0.5 hover:shadow-md;
+    }
+
+    /* Inputs */
+    .form-label {
+        @apply mb-1.5 block text-sm font-medium text-text;
+    }
+    .form-input {
+        @apply w-full rounded-lg border border-border bg-surface px-3.5 py-2.5 text-sm text-text
+               placeholder:text-text-muted focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary;
+    }
+    .form-error {
+        @apply mt-1.5 text-sm text-error;
+    }
+
+    /* Badges */
+    .badge-primary {
+        @apply inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-medium bg-primary-light text-primary;
+    }
+    .badge-success {
+        @apply inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-medium bg-success-light text-success;
+    }
+    .badge-warning {
+        @apply inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-medium bg-warning-light text-warning;
+    }
+    .badge-error {
+        @apply inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-medium bg-error-light text-error;
+    }
+    .badge-neutral {
+        @apply inline-flex items-center gap-1 rounded-full border border-border px-2.5 py-1 text-xs font-medium bg-background text-text-muted;
+    }
+
+    /* Alerts */
+    .alert-success {
+        @apply rounded-xl border px-4 py-3 text-sm border-success/20 bg-success-light text-success;
+    }
+    .alert-warning {
+        @apply rounded-xl border px-4 py-3 text-sm border-warning/20 bg-warning-light text-warning;
+    }
+    .alert-error {
+        @apply rounded-xl border px-4 py-3 text-sm border-error/20 bg-error-light text-error;
+    }
+}

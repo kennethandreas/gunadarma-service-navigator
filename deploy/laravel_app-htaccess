@@ -1,0 +1,23 @@
+# Upload this file as htdocs/laravel_app/.htaccess (note the leading dot —
+# rename it to exactly ".htaccess" after uploading, InfinityFree's File
+# Manager may hide dotfiles by default; make sure "show hidden files" is on
+# so you can confirm it actually landed there).
+#
+# Without this, everything inside laravel_app/ (including .env, which
+# contains your database password) is directly downloadable by anyone who
+# guesses the URL, e.g. yoursite.infinityfreeapp.com/laravel_app/.env —
+# because laravel_app/ had to be placed inside the web-facing htdocs/
+# folder on this host instead of outside it.
+#
+# This blocks ALL direct HTTP access to anything under laravel_app/.
+# index.php in htdocs/ still works fine — it reads these files from disk
+# directly (require/include), which is not an HTTP request and is not
+# affected by this rule.
+
+<IfModule mod_authz_core.c>
+    Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+</IfModule>
