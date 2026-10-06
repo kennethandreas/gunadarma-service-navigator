@@ -1,85 +1,178 @@
 # Gunadarma Academic Service Navigator
 
-Proyek skripsi — aplikasi navigasi layanan akademik untuk Universitas Gunadarma yang memungkinkan mahasiswa mencari layanan menggunakan pertanyaan bebas, bukan hanya kata kunci yang persis. Backend menggunakan Laravel + MySQL, sedangkan pengenalan maksud (intent) pertanyaan ditangani oleh model TF-IDF + Naive Bayes yang dibangun terpisah dengan Python.
+An AI-powered web application that helps Universitas Gunadarma students find the right academic service by asking questions in everyday language, instead of having to guess the exact keyword.
 
-Seluruh 21 fase pengembangan sudah selesai, tersisa penyempurnaan kecil. Rincian progres dan penambahan setelah fase 21 ada di bagian bawah.
+Developed as my **Undergraduate Thesis (Skripsi)**.
 
-Login admin (dari seeder): `admin@gunadarma.ac.id` / `password`. Segera ganti setelah login pertama kali.
+![Laravel](https://img.shields.io/badge/Laravel-12-FF2D20?logo=laravel&logoColor=white)
+![PHP](https://img.shields.io/badge/PHP-8.2+-777BB4?logo=php&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-Naive_Bayes-F7931E?logo=scikitlearn&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?logo=tailwindcss&logoColor=white)
 
-## Requirement
+---
 
-- PHP >= 8.2 (Laragon/XAMPP sudah mencukupi)
+## The Problem
+
+Students often don't know which office or service handles their request. A normal keyword search only works when the student types the exact term (for example "KRS"). A question like *"Saya mau cek jadwal kuliah"* ("I want to check my class schedule") would not match anything.
+
+This application understands the **intent** behind the question and points the student to the right service.
+
+## How It Works
+
+```
+Student question
+      │
+      ▼
+Laravel app ──HTTP──▶ Python AI service (Flask)
+      │                 1. Preprocess: lowercase, Sastrawi stemming, stopword removal
+      │                 2. TF-IDF vectorization
+      │                 3. Multinomial Naive Bayes → intent + confidence score
+      ◀─────────────────┘
+      │
+      ▼
+Matching services shown with the AI confidence score
+(falls back to keyword search if the AI service is offline)
+```
+
+## Model Performance
+
+| Metric | Score |
+|---|---|
+| Accuracy | **96.2%** |
+| Precision (macro avg) | 96.9% |
+| Recall (macro avg) | 96.3% |
+| F1-score (macro avg) | 96.3% |
+
+- **Dataset:** 390 example questions in Indonesian across 10 intents
+- **Test set:** 79 questions (20% split)
+- Adding Indonesian stemming and stopword removal with **Sastrawi** raised accuracy from about **92% to 96%**
+- The confidence threshold is set at **0.25**, chosen through testing: correct matches usually score 0.4–0.7, while unrelated questions score 0.10–0.23
+
+**Intents covered:** Class Schedule · Study Plan Card (KRS) · Academic Grades · Tuition Payment · Thesis Defense Registration · Graduation · Academic Administration · Academic Letters · Student Affairs · Course Information
+
+## Features
+
+**For students (public)**
+- Natural-language search with AI intent detection and confidence score
+- Quick-search chips for common questions
+- Service directory grouped by category, with detail pages for each service
+- Automatic fallback to keyword search when the AI service is unavailable
+
+**For administrators**
+- Dashboard with usage overview
+- Category and service management (create, edit, delete)
+- Search history with a low-confidence filter and CSV export, to see which questions the AI struggles with
+- Training dataset management: add, edit and delete example questions, with search, intent filter and data distribution stats
+- AI model page: view evaluation results (accuracy, per-intent scores, confusion matrix) and retrain the model with one click
+
+## Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Web application | Laravel 12, PHP 8.2+, Blade, Tailwind CSS 4, Vite |
+| Database | MySQL / MariaDB |
+| AI service | Python, Flask, scikit-learn (TF-IDF + Multinomial Naive Bayes), PySastrawi, pandas, joblib |
+| Testing | PHPUnit (59 feature and unit tests) |
+| Deployment | Docker, or shared hosting + PythonAnywhere (see `deploy/`) |
+
+## Getting Started
+
+### Requirements
+- PHP 8.2 or newer (Laragon or XAMPP is fine)
 - Composer
-- MySQL / MariaDB
-- Node.js + npm
-- Python 3.10+ — hanya diperlukan untuk menjalankan API AI (`ml/api.py`). Model sudah terlatih, sehingga Python tidak wajib jika hanya ingin menjalankan aplikasi utamanya (ada mekanisme fallback, lihat penjelasan di bawah)
+- MySQL or MariaDB
+- Node.js and npm
+- Python 3.10 or newer (only needed for AI search)
 
-## Cara menjalankan
+### 1. Run the web application
 
-```
+```bash
+git clone https://github.com/<your-username>/gunadarma-service-navigator.git
+cd gunadarma-service-navigator
+
 composer install
-cp .env.example .env        # Windows: copy .env.example .env
-```
-
-Buat database kosong terlebih dahulu dengan nama `gunadarma_navigator` (melalui HeidiSQL/phpMyAdmin bawaan Laragon/XAMPP, atau `mysql -u root -e "CREATE DATABASE gunadarma_navigator"`). Sesuaikan kredensial di `.env` apabila konfigurasi MySQL berbeda dari default (host `127.0.0.1`, port `3306`, user `root`, password kosong).
-
-```
+cp .env.example .env          # Windows: copy .env.example .env
 php artisan key:generate
-php artisan migrate
+```
+
+Create an empty database named `gunadarma_navigator`, and update the database settings in `.env` if yours are different from the defaults (`127.0.0.1:3306`, user `root`, no password).
+
+```bash
+php artisan migrate --seed
 npm install
 npm run dev
 php artisan serve
 ```
 
-Buka `http://127.0.0.1:8000`.
+Open `http://127.0.0.1:8000`.
 
-## Mengaktifkan pencarian berbasis AI
+> The seeder creates a default admin account (see `database/seeders/DatabaseSeeder.php`). **Change the password right after your first login.**
 
-Model sudah terlatih dan tersimpan di `ml/model/`, sehingga tidak perlu retrain kecuali memang ingin mengubah dataset. Agar homepage menggunakan pencarian AI (bukan hanya keyword), jalankan API-nya pada terminal terpisah dan biarkan tetap berjalan berdampingan dengan `php artisan serve`:
+### 2. Turn on AI search (optional)
 
-```
+The model is already trained and saved in `ml/model/`. Run the AI service in a separate terminal and keep it running next to `php artisan serve`:
+
+```bash
 cd ml
 pip install -r requirements.txt
-python api.py
+python api.py                 # runs on http://127.0.0.1:5000
 ```
 
-Secara default berjalan di `http://127.0.0.1:5000`. Jika API ini tidak dijalankan atau berhenti, homepage akan otomatis kembali ke pencarian kata kunci (Phase 11) — tidak menyebabkan error, hanya saja confidence score dari AI tidak ditampilkan.
+If the AI service is not running, the website still works and simply uses keyword search.
 
-Skrip Python lain yang tersedia:
+### Other Python commands
 
+```bash
+python train.py                                  # retrain the model from the dataset
+python evaluate.py                               # accuracy, precision, recall, F1 + confusion matrix
+python predict.py "Saya mau cek jadwal kuliah"   # test a single prediction
 ```
-python train.py                                 # retrain model dari dataset
-python evaluate.py                               # accuracy/precision/recall/F1 + confusion matrix
-python predict.py "Saya mau cek jadwal kuliah"   # tes prediksi langsung dari CLI
-```
 
-Preprocessing (`ml/preprocessing.py`) menerapkan stemming dan stopword removal Bahasa Indonesia (Sastrawi) sebelum tahap TF-IDF. Perubahan ini yang menaikkan akurasi dari sekitar 92% (versi awal, hanya lowercase dan strip karakter) menjadi sekitar 96%. Detail dampaknya terhadap threshold confidence dijelaskan pada komentar di `config/ai.php`.
+### AI service endpoints
 
-## Testing
+| Method | Endpoint | Description |
+|---|---|---|
+| GET | `/health` | Health check |
+| POST | `/predict` | Body `{ "question": "..." }` → returns intent and confidence |
+| POST | `/retrain` | Retrains and re-evaluates the model |
 
-```
+## Running Tests
+
+```bash
 php artisan test
 ```
 
-Terdapat 59 test (Feature + Unit) pada direktori `tests/`.
-
-## Struktur project
+## Project Structure
 
 ```
-app/            Controller, Model
-database/       Migration, seeder
-resources/      Blade views, CSS (Tailwind), JS
-routes/         web.php
-ml/dataset/     intent_dataset.csv (390 contoh, 10 intent)
-ml/model/       hasil training (.joblib, metadata.json, evaluation.json)
+app/
+├── Http/Controllers/        Public pages and admin controllers
+├── Models/                  Category, Service, SearchHistory, User
+└── Services/                SearchService (keyword + AI), AiClient (HTTP client)
+config/ai.php                Confidence threshold, AI service URL, dataset path
+database/                    Migrations, seeders, factories
+ml/
+├── dataset/                 intent_dataset.csv (390 examples, 10 intents)
+├── model/                   Trained model, vectorizer, metadata and evaluation
+├── preprocessing.py         Sastrawi stemming and stopword removal
+├── train.py / evaluate.py / predict.py
+└── api.py                   Flask REST API used by Laravel
+resources/                   Blade views, Tailwind CSS, JavaScript
+routes/                      web.php (public), admin.php (admin panel)
+tests/                       Feature and unit tests
+deploy/                      Deployment files for shared hosting + PythonAnywhere
 ```
 
-## Progres
+## Configuration
 
-Fase 1–21 sudah selesai seluruhnya: setup Laravel & database, autentikasi admin, homepage publik, direktori dan detail layanan, dashboard serta CRUD admin, pencarian (keyword & AI), training dan evaluasi model, riwayat pencarian, dashboard model AI, testing, hingga penyempurnaan UI (halaman 404/500, favicon, dan lainnya).
+| Variable | Default | Description |
+|---|---|---|
+| `AI_SERVICE_URL` | `http://127.0.0.1:5000` | URL of the Python AI service |
+| `AI_CONFIDENCE_THRESHOLD` | `0.25` | Minimum confidence to accept an AI prediction |
+| `AI_DATASET_PATH` | `ml/dataset/intent_dataset.csv` | Training dataset used by the admin dataset page |
 
-Penambahan setelah fase 21:
-- Preprocessing Sastrawi pada model, menaikkan akurasi menjadi sekitar 96% (lihat penjelasan di atas)
-- Perbaikan quick-search chip yang sebelumnya kadang tidak terdeteksi AI — dataset ditambah dari 350 menjadi 390 contoh, threshold confidence diturunkan dari 0.6 menjadi 0.25
-- Export CSV riwayat pertanyaan pada halaman admin, mengikuti filter confidence rendah yang sedang aktif
-- Halaman admin untuk mengelola dataset training — tambah/edit/hapus contoh pertanyaan langsung dari admin (membaca dan menulis `ml/dataset/intent_dataset.csv`), dilengkapi pencarian, filter per intent, serta statistik distribusi data. Setelah dataset diubah, model perlu di-retrain secara manual melalui halaman Model AI agar perubahan diterapkan.
+## Academic Context
+
+This application was developed as an **Undergraduate Thesis (Skripsi)** at Universitas Gunadarma. The work was completed in 21 development phases, from database design and the admin panel to model training, evaluation, testing and UI refinement.
