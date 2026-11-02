@@ -24,8 +24,6 @@ An AI-powered web application that helps Universitas Gunadarma students find the
 
 - [Overview](#overview)
 - [Target Users](#target-users)
-- [Screenshots](#screenshots)
-- [Demo](#demo)
 - [How It Works](#how-it-works)
 - [Model Performance](#model-performance)
 - [Product Decisions](#product-decisions)
@@ -53,8 +51,9 @@ This application classifies the **intent** of a free-text question with a machin
 | **Students** (primary) | Find the right academic service when they know *what* they need but not what the campus calls it or which office handles it | Ask a question in everyday Indonesian, no login required, and get pointed to one service with a confidence score |
 | **Academic service administrators** | Keep the service directory up to date and see where students get stuck | Manage categories and services, review search history, improve the training data and retrain the model without writing code |
 
-[ISI: how you validated these needs, e.g. a survey or interviews with students, and the results]
+<!-- [ISI: how you validated these needs, e.g. a survey or interviews with students, and the results] -->
 
+<!--
 ## Screenshots
 
 | Search result | Low-confidence answer |
@@ -67,8 +66,11 @@ This application classifies the **intent** of a free-text question with a machin
 
 ## Demo
 
-- Live demo: [ISI: demo URL, or remove this line if none]
+- Live demo: [ISI: demo URL]
 - Video walkthrough: [ISI: link to a short video]
+
+When filled in, remove this comment wrapper and add Screenshots and Demo back to the table of contents.
+-->
 
 ## How It Works
 
