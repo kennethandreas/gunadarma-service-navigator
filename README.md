@@ -23,8 +23,12 @@ An AI-powered web application that helps Universitas Gunadarma students find the
 ## Table of Contents
 
 - [Overview](#overview)
+- [Target Users](#target-users)
+- [Screenshots](#screenshots)
+- [Demo](#demo)
 - [How It Works](#how-it-works)
 - [Model Performance](#model-performance)
+- [Product Decisions](#product-decisions)
 - [Features](#features)
 - [Tech Stack](#tech-stack)
 - [Getting Started](#getting-started)
@@ -41,6 +45,30 @@ An AI-powered web application that helps Universitas Gunadarma students find the
 Students often don't know which office or service handles their request. A conventional keyword search only works when the student already knows the right term (for example *"KRS"*). A natural question such as *"Saya mau cek jadwal kuliah"* ("I want to check my class schedule") would return nothing.
 
 This application classifies the **intent** of a free-text question with a machine-learning model and directs the student to the matching service, together with a confidence score. When the AI service is unavailable, the app automatically falls back to keyword search, so it keeps working.
+
+## Target Users
+
+| User | What they need | How the app serves them |
+|------|----------------|-------------------------|
+| **Students** (primary) | Find the right academic service when they know *what* they need but not what the campus calls it or which office handles it | Ask a question in everyday Indonesian, no login required, and get pointed to one service with a confidence score |
+| **Academic service administrators** | Keep the service directory up to date and see where students get stuck | Manage categories and services, review search history, improve the training data and retrain the model without writing code |
+
+[ISI: how you validated these needs, e.g. a survey or interviews with students, and the results]
+
+## Screenshots
+
+| Search result | Low-confidence answer |
+|---|---|
+| [ISI: screenshot of a search with an AI result] | [ISI: screenshot of the "not sure yet" message] |
+
+| Admin: search history | Admin: AI model page |
+|---|---|
+| [ISI: screenshot of the history with the low-confidence filter] | [ISI: screenshot of the evaluation and retrain page] |
+
+## Demo
+
+- Live demo: [ISI: demo URL, or remove this line if none]
+- Video walkthrough: [ISI: link to a short video]
 
 ## How It Works
 
@@ -77,6 +105,30 @@ Evaluated on a held-out test set of 79 questions (20% split):
 - **Confidence threshold:** `0.25`, chosen empirically — correct matches typically score 0.4–0.7, while unrelated questions score 0.10–0.23 (see `config/ai.php`)
 
 **Intents covered:** Class Schedule · Study Plan Card (KRS) · Academic Grades · Tuition Payment · Thesis Defense Registration · Graduation · Academic Administration · Academic Letters · Student Affairs · Course Information
+
+## Product Decisions
+
+### Show no answer rather than a wrong one
+
+When the model's confidence is below the threshold, the app does not show its best guess. It shows a distinct "not sure yet" message instead. Sending a student to the wrong office costs them a wasted trip and lowers their trust in the tool, so an honest "I'm not sure" is the better result.
+
+### Why the threshold is 0.25
+
+A threshold of 0.5 or higher looks like the obvious choice, but it was tested and rejected. With this dataset size, Multinomial Naive Bayes gives correct matches a confidence of about 0.4–0.7, while unrelated questions score 0.10–0.23. An earlier threshold of 0.6 rejected even the labels of the app's own quick-search chips, which made the feature look broken. 0.25 sits in the gap between the two groups. The value is a config setting (`AI_CONFIDENCE_THRESHOLD`) and should be re-tested with `ml/evaluate.py` when the dataset grows.
+
+### Fall back to keyword search when the AI service is down
+
+The model runs as a separate Python service, which can be offline or slow, especially on free hosting. If it does not answer within 3 seconds, the app uses keyword search instead of showing an error. A simpler answer is better than no answer. The fallback is used only when the AI service cannot be reached. A low-confidence prediction still shows the "not sure yet" message.
+
+### Low-confidence searches as a feedback loop
+
+Every search is logged, including low-confidence and not-found ones, because those are the questions the model handles worst. No user identity is stored. Administrators can:
+
+1. Filter the search history to low-confidence questions and export them as CSV
+2. Add those questions, with the correct intent, to the training dataset from the admin panel
+3. Retrain the model with one click and check the new accuracy and confusion matrix
+
+This lets the campus improve the model with real questions, without a data scientist.
 
 ## Features
 
