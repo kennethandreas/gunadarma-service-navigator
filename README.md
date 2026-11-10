@@ -144,3 +144,7 @@ Undergraduate thesis project: research, dataset construction, model training and
 full-stack implementation.
 
 GitHub: [@kennethandreas](https://github.com/kennethandreas)
+
+## License
+
+Released under the [MIT License](LICENSE).
