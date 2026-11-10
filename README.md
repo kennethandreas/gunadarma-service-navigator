@@ -139,11 +139,8 @@ is also provided for container platforms.
 
 ## Author
 
-**Kenneth Andreas** — Software Engineer  
-Undergraduate thesis project: research, dataset construction, model training and evaluation, and
-full-stack implementation.
-
-GitHub: [@kennethandreas](https://github.com/kennethandreas)
+**Kenneth Andreas** ([@kennethandreas](https://github.com/kennethandreas)): research, dataset
+construction, model training and evaluation, and full-stack implementation.
 
 ## License
 
