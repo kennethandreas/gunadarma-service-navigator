@@ -1,0 +1,23 @@
+{
+  "model": "MultinomialNB",
+  "vectorizer": "TfidfVectorizer",
+  "trained_at": "2026-08-14T13:08:56",
+  "dataset_size": 392,
+  "train_size": 313,
+  "test_size": 79,
+  "train_accuracy": 0.984,
+  "test_accuracy": 0.962,
+  "num_intents": 10,
+  "intents": [
+    "administrasi-akademik",
+    "informasi-perkuliahan",
+    "jadwal-perkuliahan",
+    "kemahasiswaan",
+    "krs",
+    "nilai-akademik",
+    "pembayaran-kuliah",
+    "pendaftaran-sidang",
+    "surat-akademik",
+    "wisuda"
+  ]
+}

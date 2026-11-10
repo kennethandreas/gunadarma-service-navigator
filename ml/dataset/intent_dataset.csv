@@ -1,0 +1,393 @@
+text,intent
+"Saya mau lihat jadwal kuliah",jadwal-perkuliahan
+"Jadwal kuliah saya dimana ya",jadwal-perkuliahan
+"Saya ingin mengetahui jadwal kelas hari ini",jadwal-perkuliahan
+"Kapan jadwal kuliah semester ini dimulai",jadwal-perkuliahan
+"Boleh minta info jadwal perkuliahan semester ini",jadwal-perkuliahan
+"jadwal kuliah gue dimana",jadwal-perkuliahan
+"cek jadwal kuliah dong",jadwal-perkuliahan
+"Saya butuh jadwal mata kuliah minggu ini",jadwal-perkuliahan
+"Dimana saya bisa lihat jadwal kelas saya",jadwal-perkuliahan
+"Jadwal kuliah hari senin apa aja ya",jadwal-perkuliahan
+"Saya mau tau jadwal kuliah semester depan",jadwal-perkuliahan
+"gimana caranya liat jadwal kuliah",jadwal-perkuliahan
+"Tolong kasih tau jadwal perkuliahan saya",jadwal-perkuliahan
+"Jadwal mata kuliah pemrograman jam berapa",jadwal-perkuliahan
+"Saya ingin melihat jadwal kelas untuk minggu depan",jadwal-perkuliahan
+"kapan jadwal kuliah gasal keluar",jadwal-perkuliahan
+"Mohon informasi jadwal perkuliahan terbaru",jadwal-perkuliahan
+"jadwl kuliah dmn ya",jadwal-perkuliahan
+"Saya perlu jadwal kuliah untuk semester ganjil",jadwal-perkuliahan
+"Bagaimana cara mengetahui jadwal kelas saya",jadwal-perkuliahan
+"Ada gak jadwal kuliah buat hari ini",jadwal-perkuliahan
+"Saya mau cek jadwal kuliah saya di mana",jadwal-perkuliahan
+"jadwal perkuliahan semester ini kapan mulai",jadwal-perkuliahan
+"Saya ingin tahu jadwal kuliah lengkap satu semester",jadwal-perkuliahan
+"liat jadwal kelas gimana caranya",jadwal-perkuliahan
+"Kapan jadwal ujian dan kuliah dikeluarkan",jadwal-perkuliahan
+"Saya mau mengecek jadwal kuliah malam ini",jadwal-perkuliahan
+"jdwal kuliah saya apa aja",jadwal-perkuliahan
+"Tunjukkan jadwal perkuliahan saya minggu ini",jadwal-perkuliahan
+"Saya sedang mencari jadwal kelas semester ini",jadwal-perkuliahan
+"jam kuliah saya hari ini jam berapa",jadwal-perkuliahan
+"Saya butuh info jadwal kuliah untuk semester baru",jadwal-perkuliahan
+"dimana ya bisa cek jadwal kuliah",jadwal-perkuliahan
+"Saya ingin melihat jadwal kuliah secara online",jadwal-perkuliahan
+"Kapan jadwal perkuliahan disiplin ilmu saya keluar",jadwal-perkuliahan
+"Saya mau isi KRS",krs
+"KRS saya belum keisi",krs
+"Bagaimana cara mengisi KRS semester ini",krs
+"Saya ingin mengubah KRS yang sudah saya ambil",krs
+"kapan waktu pengisian KRS dibuka",krs
+"cara ngisi krs gimana ya",krs
+"Saya butuh bantuan untuk mengisi kartu rencana studi",krs
+"KRS ku belum disetujui dosen pembimbing",krs
+"Saya mau lihat KRS yang sudah saya submit",krs
+"gmn caranya revisi krs",krs
+"Saya ingin menambah mata kuliah di KRS saya",krs
+"Kapan periode KRS ditutup",krs
+"Boleh minta info cara isi krs online",krs
+"saya mau liat krs saya udah bener apa belum",krs
+"Saya perlu mengisi rencana studi untuk semester ganjil",krs
+"krs blm di acc dosen pa",krs
+"Dimana saya bisa mengisi KRS saya",krs
+"Saya mau menghapus mata kuliah dari KRS",krs
+"Tolong bantu saya isi KRS semester ini",krs
+"kartu rencana studi saya belum lengkap",krs
+"Saya ingin mengecek status KRS saya",krs
+"gimana cara approve krs ke dospem",krs
+"Saya sudah isi krs tapi belum di-acc",krs
+"Boleh tau jadwal pengisian KRS semester depan",krs
+"saya mau ubah krs karena salah pilih matkul",krs
+"Bagaimana prosedur pengisian kartu rencana studi",krs
+"krs saya kok belum bisa diedit",krs
+"Saya ingin tahu cara mengisi KRS untuk mahasiswa baru",krs
+"tolong info pengisian krs dong",krs
+"Saya mau konsultasi KRS dengan dosen wali",krs
+"kss saya belum kelar diisi",krs
+"Saya perlu revisi KRS sebelum batas waktu",krs
+"Dimana halaman untuk mengisi KRS",krs
+"saya lupa cara isi krs",krs
+"Saya ingin melihat rencana studi semester ini",krs
+"Saya mau lihat nilai semester saya",nilai-akademik
+"Nilai saya bisa dilihat dimana",nilai-akademik
+"Saya ingin cek nilai",nilai-akademik
+"kapan nilai UAS keluar",nilai-akademik
+"nilai saya kok belum muncul",nilai-akademik
+"Saya mau melihat transkrip nilai saya",nilai-akademik
+"gimana cara liat nilai di sistem",nilai-akademik
+"Saya ingin mengetahui IPK saya semester ini",nilai-akademik
+"Boleh minta info nilai mata kuliah kemarin",nilai-akademik
+"nilai ujian saya berapa ya",nilai-akademik
+"Saya mau cek nilai akhir semester ini",nilai-akademik
+"dimana saya bisa liat nilai kuliah",nilai-akademik
+"Saya ingin melihat rekap nilai semua semester",nilai-akademik
+"nilai saya belum update nih",nilai-akademik
+"Tolong kasih tau nilai saya yang terbaru",nilai-akademik
+"nlai saya udh keluar blm",nilai-akademik
+"Saya mau tau IPK kumulatif saya",nilai-akademik
+"Bagaimana cara mengecek nilai online",nilai-akademik
+"Saya ingin melihat detail nilai per mata kuliah",nilai-akademik
+"kapan nilai semester ganjil bisa dilihat",nilai-akademik
+"Saya perlu transkrip nilai untuk keperluan beasiswa",nilai-akademik
+"nilai saya turun apa naik ya semester ini",nilai-akademik
+"Saya mau lihat nilai ujian tengah semester",nilai-akademik
+"gmn cara cek nilai kalo lupa password",nilai-akademik
+"Saya ingin mengetahui nilai mata kuliah yang saya ambil",nilai-akademik
+"niali saya kok kosong",nilai-akademik
+"Dimana halaman untuk melihat nilai akademik",nilai-akademik
+"Saya mau minta salinan transkrip nilai",nilai-akademik
+"Boleh tau nilai saya sudah final apa belum",nilai-akademik
+"saya penasaran nilai semester ini gimana",nilai-akademik
+"Saya ingin melihat nilai kuliah secara keseluruhan",nilai-akademik
+"kapan bisa liat nilai di krs",nilai-akademik
+"Saya mau cek apakah nilai saya sudah diinput dosen",nilai-akademik
+"nilai akhir saya berapa buat mata kuliah ini",nilai-akademik
+"Saya ingin mengunduh transkrip nilai terbaru",nilai-akademik
+"Saya mau bayar kuliah",pembayaran-kuliah
+"Berapa biaya kuliah semester ini",pembayaran-kuliah
+"Saya ingin tahu cara pembayaran UKT",pembayaran-kuliah
+"kapan batas akhir bayar kuliah",pembayaran-kuliah
+"bayar spp gimana caranya",pembayaran-kuliah
+"Saya mau cek tagihan kuliah saya",pembayaran-kuliah
+"Boleh minta info rekening pembayaran kuliah",pembayaran-kuliah
+"saya belum bayar ukt bulan ini",pembayaran-kuliah
+"Saya ingin melihat riwayat pembayaran kuliah",pembayaran-kuliah
+"gmn cara bayar kuliah online",pembayaran-kuliah
+"Saya mau tanya soal cicilan biaya kuliah",pembayaran-kuliah
+"tagihan kuliah saya berapa ya",pembayaran-kuliah
+"Saya perlu bukti pembayaran kuliah semester lalu",pembayaran-kuliah
+"kapan ukt semester ini harus dibayar",pembayaran-kuliah
+"Saya ingin tahu metode pembayaran yang tersedia",pembayaran-kuliah
+"bayar kuliah pake apa aja bisa",pembayaran-kuliah
+"Saya mau konfirmasi pembayaran kuliah saya",pembayaran-kuliah
+"spp saya belum kebayar nih gimana",pembayaran-kuliah
+"Boleh tau denda telat bayar kuliah berapa",pembayaran-kuliah
+"Saya ingin membayar biaya semester ini",pembayaran-kuliah
+"dimana saya bisa liat tagihan spp",pembayaran-kuliah
+"Saya mau cek apakah pembayaran saya sudah masuk",pembayaran-kuliah
+"pembyaran kuliah lewat mana ya",pembayaran-kuliah
+"Saya perlu info pembayaran UKT untuk semester baru",pembayaran-kuliah
+"Bagaimana cara melunasi biaya kuliah yang tertunggak",pembayaran-kuliah
+"saya mau nanya soal keringanan biaya kuliah",pembayaran-kuliah
+"Saya ingin tahu jadwal pembayaran kuliah tiap semester",pembayaran-kuliah
+"byar spp dimana ya kalo online",pembayaran-kuliah
+"Saya mau mengajukan penundaan pembayaran kuliah",pembayaran-kuliah
+"Boleh minta rincian biaya kuliah semester ini",pembayaran-kuliah
+"Saya ingin mencetak bukti bayar kuliah",pembayaran-kuliah
+"kok tagihan saya belum keupdate padahal udah bayar",pembayaran-kuliah
+"Saya mau tau total biaya kuliah yang harus dibayar",pembayaran-kuliah
+"gimana kalau telat bayar ukt",pembayaran-kuliah
+"Saya ingin informasi lengkap soal pembayaran kuliah",pembayaran-kuliah
+"Saya mau daftar sidang",pendaftaran-sidang
+"Bagaimana cara mendaftar sidang skripsi",pendaftaran-sidang
+"Saya ingin tahu syarat sidang tugas akhir",pendaftaran-sidang
+"kapan pendaftaran sidang dibuka",pendaftaran-sidang
+"daftar sidang skripsi gimana caranya",pendaftaran-sidang
+"Saya mau tanya jadwal sidang skripsi saya",pendaftaran-sidang
+"Boleh minta info persyaratan sidang akhir",pendaftaran-sidang
+"saya belum daftar sidang, gimana caranya",pendaftaran-sidang
+"Saya ingin mendaftarkan diri untuk sidang tugas akhir",pendaftaran-sidang
+"kapan batas terakhir daftar sidang semester ini",pendaftaran-sidang
+"Saya mau tahu dokumen apa saja untuk sidang",pendaftaran-sidang
+"sidang skripsi butuh syarat apa aja",pendaftaran-sidang
+"Saya perlu formulir pendaftaran sidang",pendaftaran-sidang
+"gmn cara ambil jadwal sidang",pendaftaran-sidang
+"Saya ingin melihat jadwal sidang skripsi saya",pendaftaran-sidang
+"daftr sidang dimana ya",pendaftaran-sidang
+"Boleh tau prosedur pendaftaran sidang tugas akhir",pendaftaran-sidang
+"Saya mau konsultasi sebelum daftar sidang",pendaftaran-sidang
+"sidang ta saya kapan ya jadwalnya",pendaftaran-sidang
+"Saya ingin tahu berapa lama proses pendaftaran sidang",pendaftaran-sidang
+"Bagaimana cara upload berkas untuk sidang skripsi",pendaftaran-sidang
+"saya mau nanya soal revisi sebelum sidang",pendaftaran-sidang
+"Saya perlu info dosen penguji sidang saya",pendaftaran-sidang
+"kapan pengumuman jadwal sidang keluar",pendaftaran-sidang
+"Saya ingin mendaftar sidang untuk periode ini",pendaftaran-sidang
+"daftar sidang perlu transkrip nilai gak",pendaftaran-sidang
+"Saya mau tahu syarat minimal SKS untuk sidang",pendaftaran-sidang
+"gimana cara konfirmasi kehadiran sidang",pendaftaran-sidang
+"Saya ingin mengetahui alur pendaftaran sidang skripsi",pendaftaran-sidang
+"sidang skripsi saya ditunda, gimana cara daftar ulang",pendaftaran-sidang
+"Saya mau tanya tentang pendaftaran sidang tugas akhir",pendaftaran-sidang
+"dimana saya bisa daftar sidang online",pendaftaran-sidang
+"Saya perlu bantuan untuk mendaftar sidang semester ini",pendaftaran-sidang
+"pndaftaran sidang dibuka kapan",pendaftaran-sidang
+"Saya ingin tahu semua persyaratan sebelum sidang skripsi",pendaftaran-sidang
+"Saya mau daftar wisuda",wisuda
+"Kapan jadwal wisuda semester ini",wisuda
+"Saya ingin tahu syarat ikut wisuda",wisuda
+"daftar wisuda gimana caranya",wisuda
+"Boleh minta info biaya wisuda",wisuda
+"saya belum daftar wisuda, masih bisa gak",wisuda
+"Saya mau tahu kapan wisuda tahun ini dilaksanakan",wisuda
+"wisuda periode ini kapan ya",wisuda
+"Saya ingin mendaftarkan diri untuk wisuda",wisuda
+"kapan batas akhir pendaftaran wisuda",wisuda
+"Saya perlu dokumen apa saja untuk wisuda",wisuda
+"gmn cara daftar wisuda online",wisuda
+"Saya mau tanya soal toga dan atribut wisuda",wisuda
+"wisuda saya kapan dijadwalkan",wisuda
+"Boleh tau lokasi acara wisuda semester ini",wisuda
+"Saya ingin tahu prosedur pendaftaran wisuda",wisuda
+"daftr wisuda dimana ya",wisuda
+"Saya mau konfirmasi kehadiran wisuda",wisuda
+"wisuda butuh syarat ipk minimal berapa",wisuda
+"Saya perlu info jadwal gladi bersih wisuda",wisuda
+"Bagaimana cara membayar biaya wisuda",wisuda
+"saya mau nanya soal undangan wisuda",wisuda
+"Saya ingin mengetahui jumlah tamu yang boleh diundang",wisuda
+"kapan pengumuman peserta wisuda keluar",wisuda
+"Saya mau daftar wisuda periode berikutnya",wisuda
+"wisuda perlu transkrip nilai asli gak",wisuda
+"Saya ingin tahu syarat administrasi sebelum wisuda",wisuda
+"gimana cara ambil toga wisuda",wisuda
+"Saya ingin mengetahui alur pendaftaran wisuda",wisuda
+"wisuda saya ditunda, gimana cara daftar ulang",wisuda
+"Saya mau tanya tentang pendaftaran wisuda periode ini",wisuda
+"dimana saya bisa daftar wisuda online",wisuda
+"Saya perlu bantuan untuk mendaftar wisuda semester ini",wisuda
+"pndaftaran wisuda dibuka kapan",wisuda
+"Saya ingin tahu semua persyaratan sebelum wisuda",wisuda
+"Saya mau urus administrasi akademik",administrasi-akademik
+"Bagaimana cara mengurus surat cuti kuliah",administrasi-akademik
+"Saya ingin tahu prosedur administrasi mahasiswa",administrasi-akademik
+"gimana cara ngurus pindah kelas",administrasi-akademik
+"Saya mau tanya soal cuti akademik",administrasi-akademik
+"Boleh minta info layanan administrasi kampus",administrasi-akademik
+"saya butuh bantuan urus berkas akademik",administrasi-akademik
+"Saya ingin mengetahui cara mengajukan cuti kuliah",administrasi-akademik
+"administrasi akademik saya belum selesai",administrasi-akademik
+"kemana saya harus urus masalah akademik",administrasi-akademik
+"Saya perlu bantuan administrasi untuk mahasiswa baru",administrasi-akademik
+"gmn cara urus perpanjangan studi",administrasi-akademik
+"Saya mau tanya soal her-registrasi",administrasi-akademik
+"herregistrasi gimana caranya ya",administrasi-akademik
+"Saya ingin tahu syarat pengajuan cuti akademik",administrasi-akademik
+"Boleh tau prosedur pindah jurusan",administrasi-akademik
+"Saya mau mengurus keterlambatan registrasi",administrasi-akademik
+"administrasi saya bermasalah, kemana harus lapor",administrasi-akademik
+"Saya perlu info layanan akademik untuk masalah administratif",administrasi-akademik
+"gimana cara lapor masalah administrasi kuliah",administrasi-akademik
+"Saya ingin mengurus dispensasi akademik",administrasi-akademik
+"kemana saya kontak bagian akademik",administrasi-akademik
+"Saya mau tanya soal her registrasi semester ini",administrasi-akademik
+"Boleh minta bantuan urus surat administrasi",administrasi-akademik
+"Saya ingin tahu layanan apa saja di bagian akademik",administrasi-akademik
+"admnistrasi akademik saya belum kelar",administrasi-akademik
+"Saya perlu mengurus perubahan data akademik",administrasi-akademik
+"gmn cara hubungi bagian administrasi kampus",administrasi-akademik
+"Saya mau konsultasi soal masalah administratif kuliah",administrasi-akademik
+"Boleh tau jam operasional bagian akademik",administrasi-akademik
+"Saya ingin mengajukan keringanan administrasi",administrasi-akademik
+"kemana saya urus masalah nilai yang belum masuk",administrasi-akademik
+"Saya perlu bantuan mengurus dokumen akademik saya",administrasi-akademik
+"pengurusan administrasi kuliah dimana ya",administrasi-akademik
+"Saya ingin tahu semua layanan administrasi akademik kampus",administrasi-akademik
+"Saya mau minta surat keterangan aktif kuliah",surat-akademik
+"Bagaimana cara membuat surat akademik",surat-akademik
+"Saya ingin mengajukan surat keterangan lulus",surat-akademik
+"gimana cara bikin surat cuti kuliah",surat-akademik
+"Saya mau tanya soal surat rekomendasi",surat-akademik
+"Boleh minta info pengajuan surat akademik",surat-akademik
+"saya butuh surat keterangan mahasiswa aktif",surat-akademik
+"Saya ingin mengetahui cara membuat surat pengantar",surat-akademik
+"surat keterangan saya belum jadi",surat-akademik
+"kemana saya bisa minta surat akademik",surat-akademik
+"Saya perlu surat keterangan untuk keperluan beasiswa",surat-akademik
+"gmn cara ajukan surat akademik online",surat-akademik
+"Saya mau tanya soal legalisir ijazah",surat-akademik
+"legalisir transkrip gimana caranya",surat-akademik
+"Saya ingin tahu syarat pengajuan surat keterangan",surat-akademik
+"Boleh tau berapa lama proses surat akademik",surat-akademik
+"Saya mau mengajukan surat izin penelitian",surat-akademik
+"surat saya belum selesai diproses, gimana",surat-akademik
+"Saya perlu surat rekomendasi dari kampus",surat-akademik
+"gimana cara minta surat pindah kuliah",surat-akademik
+"Saya ingin mengurus surat keterangan cuti",surat-akademik
+"kemana saya ambil surat akademik yang sudah jadi",surat-akademik
+"Saya mau tanya soal surat keterangan lulus sementara",surat-akademik
+"Boleh minta bantuan buat surat izin praktik kerja",surat-akademik
+"Saya ingin tahu format surat akademik yang benar",surat-akademik
+"srat keterangan saya kapan selesai",surat-akademik
+"Saya perlu mengurus surat aktif kuliah untuk beasiswa",surat-akademik
+"gmn cara legalisir dokumen akademik",surat-akademik
+"Saya mau konsultasi soal pengajuan surat resmi kampus",surat-akademik
+"Boleh tau syarat legalisir ijazah dan transkrip",surat-akademik
+"Saya ingin mengajukan surat keterangan tidak mampu",surat-akademik
+"kemana saya urus surat keterangan aktif",surat-akademik
+"Saya perlu bantuan membuat surat pengantar penelitian",surat-akademik
+"pengajuan surat akademik dimana ya",surat-akademik
+"Saya ingin tahu semua jenis surat akademik yang bisa diajukan",surat-akademik
+"Saya mau ikut organisasi kemahasiswaan",kemahasiswaan
+"Bagaimana cara daftar UKM kampus",kemahasiswaan
+"Saya ingin tahu info kegiatan mahasiswa",kemahasiswaan
+"gimana cara gabung himpunan mahasiswa",kemahasiswaan
+"Saya mau tanya soal beasiswa kemahasiswaan",kemahasiswaan
+"Boleh minta info organisasi mahasiswa yang ada",kemahasiswaan
+"saya butuh info kegiatan UKM terbaru",kemahasiswaan
+"Saya ingin mengetahui cara ikut BEM",kemahasiswaan
+"kemahasiswaan kampus ada kegiatan apa aja",kemahasiswaan
+"kemana saya daftar jadi anggota UKM",kemahasiswaan
+"Saya perlu info lomba yang diadakan kemahasiswaan",kemahasiswaan
+"gmn cara ikut kegiatan organisasi mahasiswa",kemahasiswaan
+"Saya mau tanya soal pendaftaran anggota BEM",kemahasiswaan
+"UKM olahraga daftarnya dimana ya",kemahasiswaan
+"Saya ingin tahu jadwal kegiatan kemahasiswaan bulan ini",kemahasiswaan
+"Boleh tau cara mengajukan proposal kegiatan mahasiswa",kemahasiswaan
+"Saya mau ikut kepanitiaan acara kampus",kemahasiswaan
+"kegiatan organisasi mahasiswa ada dimana infonya",kemahasiswaan
+"Saya perlu info soal dana kegiatan mahasiswa",kemahasiswaan
+"gimana cara buat organisasi mahasiswa baru",kemahasiswaan
+"Saya ingin bergabung dengan komunitas mahasiswa",kemahasiswaan
+"kemana saya tanya soal UKM musik",kemahasiswaan
+"Saya mau tanya soal seleksi anggota himpunan",kemahasiswaan
+"Boleh minta bantuan info acara kemahasiswaan",kemahasiswaan
+"Saya ingin tahu syarat ikut organisasi kampus",kemahasiswaan
+"kegiatan kmahasiswaan ada info dimana",kemahasiswaan
+"Saya perlu mengurus surat rekomendasi organisasi",kemahasiswaan
+"gmn cara daftar jadi pengurus BEM",kemahasiswaan
+"Saya mau konsultasi soal kegiatan kemahasiswaan",kemahasiswaan
+"Boleh tau jadwal open recruitment UKM",kemahasiswaan
+"Saya ingin mengikuti pelatihan kepemimpinan mahasiswa",kemahasiswaan
+"kemana saya cari info lomba mahasiswa",kemahasiswaan
+"Saya perlu bantuan info organisasi kemahasiswaan kampus",kemahasiswaan
+"pendaftaran UKM dibuka kapan ya",kemahasiswaan
+"Saya ingin tahu semua kegiatan kemahasiswaan yang tersedia",kemahasiswaan
+"Saya mau tanya info perkuliahan",informasi-perkuliahan
+"Bagaimana cara mengetahui pengumuman akademik",informasi-perkuliahan
+"Saya ingin tahu kalender akademik semester ini",informasi-perkuliahan
+"gimana cara liat pengumuman kampus",informasi-perkuliahan
+"Saya mau tanya soal libur kuliah semester ini",informasi-perkuliahan
+"Boleh minta info perkuliahan terbaru",informasi-perkuliahan
+"saya butuh info soal kalender akademik",informasi-perkuliahan
+"Saya ingin mengetahui jadwal libur semester",informasi-perkuliahan
+"info perkuliahan kampus dimana ya",informasi-perkuliahan
+"kemana saya cari pengumuman akademik",informasi-perkuliahan
+"Saya perlu info soal perkuliahan daring",informasi-perkuliahan
+"gmn cara tau info kuliah terbaru",informasi-perkuliahan
+"Saya mau tanya soal jadwal semester genap",informasi-perkuliahan
+"kalender akademik tahun ini gimana ya",informasi-perkuliahan
+"Saya ingin tahu pengumuman terbaru dari kampus",informasi-perkuliahan
+"Boleh tau info libur nasional dan kuliah",informasi-perkuliahan
+"Saya mau cari tahu info perkuliahan semester depan",informasi-perkuliahan
+"pengumuman akademik ada dimana ya",informasi-perkuliahan
+"Saya perlu info soal jadwal UTS dan UAS",informasi-perkuliahan
+"gimana cara akses info perkuliahan online",informasi-perkuliahan
+"Saya ingin tahu jadwal awal masuk kuliah",informasi-perkuliahan
+"kemana saya tanya soal info akademik umum",informasi-perkuliahan
+"Saya mau tanya soal perubahan jadwal kuliah",informasi-perkuliahan
+"Boleh minta bantuan info seputar perkuliahan",informasi-perkuliahan
+"Saya ingin tahu semua pengumuman kampus terbaru",informasi-perkuliahan
+"info perkuliahaan kapan update terbaru",informasi-perkuliahan
+"Saya perlu tahu kalender akademik lengkap",informasi-perkuliahan
+"gmn cara dapat notifikasi info kampus",informasi-perkuliahan
+"Saya mau konsultasi soal jadwal perkuliahan umum",informasi-perkuliahan
+"Boleh tau info seputar kegiatan akademik semester ini",informasi-perkuliahan
+"Saya ingin mengetahui pengumuman resmi kampus",informasi-perkuliahan
+"kemana saya cari tahu info kuliah terkini",informasi-perkuliahan
+"Saya perlu bantuan cari info perkuliahan semester ini",informasi-perkuliahan
+"info akademik kampus dimana bisa dilihat",informasi-perkuliahan
+"Saya ingin tahu semua info penting soal perkuliahan",informasi-perkuliahan
+"jadwal kuliah",jadwal-perkuliahan
+"jadwal kelas",jadwal-perkuliahan
+"jadwal perkuliahan",jadwal-perkuliahan
+"jam kuliah hari ini",jadwal-perkuliahan
+krs,krs
+"isi krs",krs
+"kartu rencana studi",krs
+"revisi krs",krs
+"lihat nilai",nilai-akademik
+"nilai kuliah",nilai-akademik
+"transkrip nilai",nilai-akademik
+"nilai semester",nilai-akademik
+"bayar kuliah",pembayaran-kuliah
+"biaya kuliah",pembayaran-kuliah
+"bayar spp",pembayaran-kuliah
+"ukt semester ini",pembayaran-kuliah
+"daftar sidang",pendaftaran-sidang
+"sidang skripsi",pendaftaran-sidang
+"pendaftaran sidang",pendaftaran-sidang
+"jadwal sidang",pendaftaran-sidang
+wisuda,wisuda
+"daftar wisuda",wisuda
+"jadwal wisuda",wisuda
+"info wisuda",wisuda
+"administrasi akademik",administrasi-akademik
+"cuti kuliah",administrasi-akademik
+"her registrasi",administrasi-akademik
+"pindah kelas",administrasi-akademik
+"surat keterangan",surat-akademik
+"surat akademik",surat-akademik
+"legalisir ijazah",surat-akademik
+"surat aktif kuliah",surat-akademik
+"ukm kampus",kemahasiswaan
+"organisasi mahasiswa",kemahasiswaan
+"kegiatan mahasiswa",kemahasiswaan
+"daftar ukm",kemahasiswaan
+"info perkuliahan",informasi-perkuliahan
+"kalender akademik",informasi-perkuliahan
+"pengumuman kampus",informasi-perkuliahan
+"info kuliah",informasi-perkuliahan
+"saya butuh jadwl uts",jadwal-perkuliahan
+"saya butuh jadwal uts",jadwal-perkuliahan
